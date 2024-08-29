@@ -66,7 +66,7 @@ We can have modular monoliths with a single DB with a coupling between modules.
 
 Or we can have modular monoliths with multiple DBs to avoid coupling between modules.
 
-![multiple db](1-**8**.png)
+![multiple db](1-8.png)
 
 ### Distributed Monolith
 

@@ -107,3 +107,124 @@ Distributed tracing is also important. It allows us to trace a request through m
 ![tracing](1-9.png)
 
 ### Containers and Kubernetes
+
+**Containers** provide a mush more lightweight way to provision isolated execution for service instances.
+
+When using **container** we could use **Kubernetes** to manage them across different machines.
+
+You can use different cloud providers:
+
+- **Google Kubernetes Engine**
+- **Azure Kubernetes Service**
+- **Amazon Elastic Kubernetes Service**
+
+### Streaming Platforms
+
+If you need a way to share data between microservices, we can use a streaming platform such as **Apache Kafka**.
+
+Characteristics of Apache Kafka or diffrerent streaming platforms:
+
+- Message performance
+- Compaction
+- Ability to scale to handle large volumes of messages
+
+
+### Public Cloud and Serverless
+
+AWS, Azure, and Google Cloud are the main public cloud providers.
+
+## Advantages of Microservices
+
+- **Technology Heretoegeneity**
+
+  - You can use different technologies for different services. Databases or language programming.
+  - You can adopt technologies quickly.
+
+![1-10](1-10.png)
+
+- **Robustness**
+
+  - If a service fails, the entire application doesn't fail.
+  - You can have a fallback mechanism.
+
+- **Scalability**
+
+  - You can scale each service independently.
+  - You can use different scaling strategies for different services.
+
+![1-11](1-11.png)
+
+- **Ease of Deployment**
+
+  - You can deploy each service independently.
+  - You can get new functionality out to customers faster.
+
+- **Organizational Alignment**
+
+  - Small teams working on small services can be more productive.
+  - Teams can own a service end-to-end. (Frontend, backend, QA, etc.)
+
+- **Composability**
+
+  - You can compose new functionality by combining existing services.
+
+## Microservice Pain Points
+
+- **Developer experiencie**
+
+  - It could happen that a developer couldn't have sufficient machine resources to run all the services.
+
+- **Technology Overload**
+  
+  - It could happen that you have too many technologies to manage and overhelmed by the number of services.
+  - Be pragmatic about the number of technologies you use and the number of services you'll manage.
+
+- **Cost**
+
+  - Microservices can be more expensive than monoliths.
+  - You have to pay for the overhead of managing multiple services.
+  - It could be more expensive in economic and human resources.
+
+- **Reporting**
+
+  - It could be difficult to get a global view of the system because you have to aggregate data from multiple services.
+  - You have to use log aggregation and distributed tracing.
+
+![1-12](1-12.png)
+
+- **Monitoring and Troubleshooting**
+
+  - With a monolith, you have a single point of failure. With microservices, you have multiple points of failure and you need more monitoring and troubleshooting efforts.
+
+- **Security**
+
+  - With microservices, you have to secure multiple services instead a single service.
+  - You have to secure the communication between services.
+
+- **Testing**
+
+  - The scope of our end-to-end tests is larger with microservices.
+  - Setup fixtures and data for tests is more complex.
+
+- **Latency**
+
+  - With microservices, you have to make network calls between services and take care about the slow or fast network calls.
+
+- **Data COnsistency**
+
+  - With microservices, you have to ensure data consistency between services.
+  - Transactions are more complex. You can use Saga Pattern or Process Managers to deal with distributed transactions. Motheover, you can use eventual consistency, CQRS or outbox pattern.
+
+## Should I Use Microservices?
+
+- **Whom they might not work for**
+
+  - Bad for brand-new products or startups because of the velocity of change and the lack of domain model clarity.
+  - Stratups could have fewer people available to build the system.
+  - For startups the biggest constraint is the people in order to build a microservices architecture.
+
+- **Where they work well**
+  
+  - For large organizations with well defined boundaries.
+  - Software as a Service (SaaS) applications. These services are expected to be up 24/7 which creates challenges when it comes to rolling out changes.
+  - For companies who are looking to provide services to their customer in different channels.

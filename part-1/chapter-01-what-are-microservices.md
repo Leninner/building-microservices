@@ -1,3 +1,21 @@
+- [Chapter 1 - What are Microservices?](#chapter-1---what-are-microservices)
+  - [Key concepts](#key-concepts)
+  - [Alignment of Architecture and Organization\*\*](#alignment-of-architecture-and-organization)
+  - [The Monolith](#the-monolith)
+    - [Single-Process Monolith](#single-process-monolith)
+    - [Modular Monolith](#modular-monolith)
+    - [Distributed Monolith](#distributed-monolith)
+    - [Monoliths and Delivery Contention](#monoliths-and-delivery-contention)
+    - [Advantages of Monoliths](#advantages-of-monoliths)
+  - [Enabling Technology](#enabling-technology)
+    - [Log Aggregation and Distributed Tracing](#log-aggregation-and-distributed-tracing)
+    - [Containers and Kubernetes](#containers-and-kubernetes)
+    - [Streaming Platforms](#streaming-platforms)
+    - [Public Cloud and Serverless](#public-cloud-and-serverless)
+  - [Advantages of Microservices](#advantages-of-microservices)
+  - [Microservice Pain Points](#microservice-pain-points)
+  - [Should I Use Microservices?](#should-i-use-microservices)
+
 # Chapter 1 - What are Microservices?
 
 - Are independently releasable services that are modeled around a business domain.

@@ -1,3 +1,10 @@
+- [How to Model Microservices](#how-to-model-microservices)
+  - [What makes a good microservice boundary?](#what-makes-a-good-microservice-boundary)
+    - [1. Information Hiding](#1-information-hiding)
+    - [2. Cohesion](#2-cohesion)
+    - [3. Coupling](#3-coupling)
+  - [The Interplay of Coupling and Cohesion](#the-interplay-of-coupling-and-cohesion)
+
 # How to Model Microservices
 
 ## What makes a good microservice boundary?

@@ -6,13 +6,13 @@
 
 ## Key concepts
 
-* **Independent Deployability**
+- **Independent Deployability**
 
   - Each service can be deployed independently of other services.
   - This allows for faster deployment cycles.
   - We have to ensure a "loosely coupled" architecture. Change one service without the need to change others.
 
-* **Modeled around a Business Domain**
+- **Modeled around a Business Domain**
   
   - Each service is modeled around a business domain.
   - DDD is a good approach to model microservices.
@@ -20,19 +20,19 @@
 
 ![traditional 3-tiered architecture](1-2.png)
 
-* **Owning their Own State**
+- **Owning their Own State**
   
   - Using a separate database for each service is a key characteristic of microservices.
   - This allows for each service to publish the public and non-very-volatile data to other services and hide the private data that could change more frequently than public data.
   - Is similar to Encapsulation in OOP.
 
-* **Size**
+- **Size**
 
   - A microservice should be as big as your head. If you can't hold the whole service in your head, it's too big.
   - Is a subjective concept, but it's a good rule of thumb. A person who have worked on a service with 100K lines of code could thing that a service with 10K lines of code is a microservice. A person who have worked on a service with 10K lines of code could thing that a service with 1K lines of code is a microservice. And so on.
   - Focus on two main things: How many microservices can you handle? How do you define the boundaries of a microservice?
 
-* **Flexibility**
+- **Flexibility**
 
   - Microservices allow for flexibility in technology stack.
   - Each service can be written in a different language or use different technologies.
@@ -127,7 +127,6 @@ Characteristics of Apache Kafka or diffrerent streaming platforms:
 - Message performance
 - Compaction
 - Ability to scale to handle large volumes of messages
-
 
 ### Public Cloud and Serverless
 

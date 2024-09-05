@@ -36,3 +36,27 @@ When services are loosely coupled, a change to one service should not require a 
 You should aim to avoid having multiple and different types of calls from one service to another. Moreover, you should avoid having chatty communication between services. This is because the more services communicate, the more coupling you have.
 
 ## The Interplay of Coupling and Cohesion
+
+> A structure is stable if cohesion is strong and coupling is low.
+
+Cohesion applies to the relationship between things `inside` a boundary. Coupling applies to the relationship between things `across` boundaries.
+
+The world is not static! It's totally possible that our system requirements change and we have to rethink about the boundaries of our services.
+
+## Types of Coupling
+
+There are several types of coupling. Here are some of them using a scale from  `1` (low coupling) to `5` (high coupling):
+
+[!2-1](2-1.png)
+
+### Domain Coupling
+
+Describes a situation in which one microservice needs to interact with another one to fulfill a request.
+
+[!2-2](2-2.png)
+
+This type of coupling rarely can be avoided because it's a natural consequence of the problem domain. The key is to keep it to a minimum remembering the importance of information hiding.
+
+> **Temporal Coupling**: When one service must be called before another in a `Synchronous` way.
+
+[!2-3](2-3.png)

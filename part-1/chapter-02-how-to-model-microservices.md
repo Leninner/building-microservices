@@ -47,16 +47,40 @@ The world is not static! It's totally possible that our system requirements chan
 
 There are several types of coupling. Here are some of them using a scale from  `1` (low coupling) to `5` (high coupling):
 
-[!2-1](2-1.png)
+![2-1](2-1.png)
 
 ### Domain Coupling
 
 Describes a situation in which one microservice needs to interact with another one to fulfill a request.
 
-[!2-2](2-2.png)
+![2-2](2-2.png)
 
 This type of coupling rarely can be avoided because it's a natural consequence of the problem domain. The key is to keep it to a minimum remembering the importance of information hiding.
 
-> **Temporal Coupling**: When one service must be called before another in a `Synchronous` way.
+> **Temporal Coupling**: When one service must be called before another in a `Synchronous` way. You must to avoid this type of coupling.
 
-[!2-3](2-3.png)
+![2-3](2-3.png)
+
+### Pass-Through Coupling
+
+Describes a situation in which one microservice passes data to another one purely because the data is needed by some other microservice further downstream.
+
+![2-4](2-4.png)
+
+One way to reduce this type of coupling is passing data throughout the chain without modifying it. This way, you can avoid the need of changing the data structure in all the services.
+
+### Common Coupling
+
+Occurs when two or more microservices share a common data structure. This is a form of coupling because if the data structure changes, all the services need to be updated.
+
+Sharing static data could be no problem, but when you share dynamic data, you are coupling the services.
+
+### Content Coupling
+
+Describes a situation in which an upstream service reaches into the internals of a downstream service and changes its internal state.
+
+A common manifestation is that an external service reaches into another service database and changes its state. This is a bad practice because it makes the downstream service dependent on the upstream service.
+
+![2-11](2-11.png)
+
+As devs, we should take care about boundaries and have a clear separation between what can be changed freely and what cannot.
